@@ -1,3 +1,6 @@
+#Git
+alias g-reset="git reset HEAD --hard"
+
 # Jigsaw
 alias j-clean="git checkout source/assets/build/"
 alias j-dev="vendor/bin/jigsaw build local"
