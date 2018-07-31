@@ -1,5 +1,10 @@
+#artisan
+alias a-migrate="php artisan migrate"
+alias a-refresh="php artisan migrate:refresh"
+alias a-seed="php artisan migrate:refresh --seed"
+
 #Git
-alias g-reset="git reset HEAD --hard"
+alias nah="git reset HEAD --hard"
 
 # Jigsaw
 alias j-clean="git checkout source/assets/build/"
