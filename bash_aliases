@@ -1,14 +1,15 @@
 # Artisan
-alias a-migrate="php artisan migrate"
-alias a-refresh="php artisan migrate:refresh"
-alias a-seed="php artisan migrate:refresh --seed"
+alias art="php artisan"
+alias migrate="php artisan migrate"
+alias fresh="php artisan migrate:refresh"
+alias freshest="php artisan migrate:refresh --seed"
 
-
-# Custom
-alias work="code . && killall Terminal"
+# COMPOSER
+alias dump="composer dump-autoload"
 
 # Git
 alias nah="git reset HEAD --hard"
+alias switch="git checkout -"
 
 # Jigsaw
 alias j-clean="git checkout source/assets/build/"
@@ -20,3 +21,11 @@ alias j-staging="vendor/bin/jigsaw build staging"
 # NPM
 alias watch='npm run watch'
 alias npm-nuke='rm -rf node_modules; rm package-lock.json yarn.lock; npm cache clear --force;'
+
+# TESTING
+alias test="./vendor/bin/phpunit"
+
+# Custom
+alias work="code . && killall Terminal"
+alias tlint="~/.composer/vendor/bin/tlint"
+alias wip="git add . && git commit -m 'wip'"
