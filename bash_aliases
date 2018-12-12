@@ -8,8 +8,11 @@ alias freshest="php artisan migrate:refresh --seed"
 alias dump="composer dump-autoload"
 
 # Git
+alias base="git rebase"
 alias nah="git reset HEAD --hard"
-alias switch="git checkout -"
+alias switch="git checkout"
+alias branch="git checkout -b"
+alias branches="git branch-a"
 
 # Jigsaw
 alias j-clean="git checkout source/assets/build/"
