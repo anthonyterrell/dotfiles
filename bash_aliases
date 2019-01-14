@@ -12,7 +12,8 @@ alias base="git rebase"
 alias nah="git reset HEAD --hard"
 alias switch="git checkout"
 alias branch="git checkout -b"
-alias branches="git branch-a"
+alias branches="git branch -a"
+alias latest-tag="git describe --tags --abbrev=0"
 
 # Jigsaw
 alias j-clean="git checkout source/assets/build/"
