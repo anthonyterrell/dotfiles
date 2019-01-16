@@ -5,18 +5,20 @@ alias fresh="php artisan migrate:refresh"
 alias freshest="php artisan migrate:refresh --seed"
 
 # COMPOSER
-alias dump="composer dump-autoload"
+alias poop="composer dump-autoload"
 
 # Git
+alias amend="git --amend"
 alias base="git rebase"
+alias commit='git commit -m "'
 alias nah="git reset HEAD --hard"
 alias switch="git checkout"
 alias branch="git checkout -b"
 alias branches="git branch-a"
 
 # Jigsaw
-alias j-clean="git checkout source/assets/build/"
 alias j-dev="vendor/bin/jigsaw build local"
+alias j-init="vendor/bin/jigsaw init"
 alias j-prod="vendor/bin/jigsaw build production"
 alias j-serve="php -S localhost:3000 -t build_local"
 alias j-staging="vendor/bin/jigsaw build staging"
