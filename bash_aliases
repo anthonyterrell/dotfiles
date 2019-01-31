@@ -10,12 +10,13 @@ alias poop="composer dump-autoload"
 # Git
 alias amend="git --amend"
 alias base="git rebase"
-alias commit='git commit -m "'
-alias nah="git reset HEAD --hard"
-alias switch="git checkout"
 alias branch="git checkout -b"
 alias branches="git branch -a"
+alias commit='git commit -m "'
 alias latest-tag="git describe --tags --abbrev=0"
+alias nah="git reset HEAD --hard"
+alias status="git status"
+alias switch="git checkout"
 
 # Jigsaw
 alias j-dev="vendor/bin/jigsaw build local"
@@ -30,6 +31,8 @@ alias npm-nuke='rm -rf node_modules; rm package-lock.json yarn.lock; npm cache c
 
 # TESTING
 alias test="~/.composer/vendor/bin/phpunit --printer 'Sempro\PHPUnitPrettyPrinter\PrettyPrinter'"
+alias test-all="test && test-web && tlint --diff"
+alias test-web="axe http://${PWD##*/}.test"
 
 # Custom
 alias work="code . && killall Terminal"
