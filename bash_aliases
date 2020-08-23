@@ -12,7 +12,7 @@ alias amend="git --amend"
 alias base="git rebase"
 alias branch="git checkout -b"
 alias branches="git branch -a"
-alias commit='git commit -m "'
+alias commit='git commit -m'
 alias latest-tag="git describe --tags --abbrev=0"
 alias nah="git reset HEAD --hard"
 alias status="git status"
