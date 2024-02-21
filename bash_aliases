@@ -30,7 +30,8 @@ alias watch='npm run watch'
 alias npm-nuke='rm -rf node_modules; rm package-lock.json yarn.lock; npm cache clear --force;'
 
 # TESTING
-alias test="~/.composer/vendor/bin/phpunit --printer 'Sempro\PHPUnitPrettyPrinter\PrettyPrinter'"
+alias pest="./vendor/bin/pest"
+alias test="./vendor/bin/phpunit"
 alias test-all="test && test-web && tlint --diff"
 alias test-web="axe http://${PWD##*/}.test"
 
