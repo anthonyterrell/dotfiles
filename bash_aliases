@@ -1,8 +1,7 @@
 # Artisan
 alias art="php artisan"
 alias migrate="php artisan migrate"
-alias fresh="php artisan migrate:refresh"
-alias freshest="php artisan migrate:refresh --seed"
+alias fresh="php artisan migrate:fresh --seed"
 
 # COMPOSER
 alias poop="composer dump-autoload"
@@ -25,6 +24,9 @@ alias j-prod="vendor/bin/jigsaw build production"
 alias j-serve="php -S localhost:3000 -t build_local"
 alias j-staging="vendor/bin/jigsaw build staging"
 
+# Laravel
+alias l-fresh="composer install && npm install && fresh && npm run dev";
+
 # NPM
 alias watch='npm run watch'
 alias npm-nuke='rm -rf node_modules; rm package-lock.json yarn.lock; npm cache clear --force;'
@@ -39,3 +41,4 @@ alias test-web="axe http://${PWD##*/}.test"
 alias work="code . && killall Terminal"
 alias tlint="~/.composer/vendor/bin/tlint"
 alias wip="git add . && git commit -m 'wip'"
+alias lssh="python3 ~/Sites/ssh-for-the-lazy/ssh_for_the_lazy.py"
