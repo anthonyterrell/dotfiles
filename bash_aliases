@@ -16,6 +16,9 @@ alias latest-tag="git describe --tags --abbrev=0"
 alias nah="git reset HEAD --hard"
 alias status="git status"
 alias switch="git checkout"
+alias cherry="git cherry-pick"
+alias pull="git pull"
+alias push="git push"
 
 # Jigsaw
 alias j-dev="vendor/bin/jigsaw build local"
