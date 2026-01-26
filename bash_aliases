@@ -19,6 +19,8 @@ alias switch="git checkout"
 alias cherry="git cherry-pick"
 alias pull="git pull"
 alias push="git push"
+alias add="git add"
+alias all="git add --all"
 
 # Jigsaw
 alias j-dev="vendor/bin/jigsaw build local"
