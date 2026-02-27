@@ -45,5 +45,7 @@ alias test-all="pest && npm run test"
 # Custom
 alias work="code . && killall Terminal"
 alias tlint="~/.composer/vendor/bin/tlint"
+alias pint="vendor/bin/pint"
+alias fix="vendor/bin/pint"
 alias lssh="python3 ~/Sites/ssh-for-the-lazy/ssh_for_the_lazy.py"
 source ~/Sites/personal/dotfiles/functions.sh
