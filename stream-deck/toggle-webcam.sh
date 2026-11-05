@@ -8,13 +8,17 @@ PROTECTED_PATTERN='0fd9:|Stream Deck'
 FALLBACK_HUB="0-1"
 FALLBACK_PORT="3"
 
-notify() {
+show_notification() {
   osascript -e "display notification \"$1\" with title \"Webcam\"" >/dev/null 2>&1 || true
+}
+
+notify() {
+  [[ "${TOGGLE_QUIET:-0}" == 1 ]] || show_notification "$1"
 }
 
 fail() {
   echo "toggle-webcam: $1" >&2
-  notify "$1"
+  show_notification "$1"
   exit 1
 }
 
@@ -42,6 +46,11 @@ port_line() {
 status=$(run_uhubctl) || fail "Could not read USB hub status (uhubctl failed)"
 
 read -r hub port <<<"$(find_camera "$status")"
+
+if [[ "${1:-}" == "--status" ]]; then
+  [[ -n "${hub:-}" ]] && echo on || echo off
+  exit 0
+fi
 
 if [[ -n "${hub:-}" ]]; then
   line=$(port_line "$status" "$hub" "$port")

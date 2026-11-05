@@ -1,0 +1,52 @@
+{
+  "Name": "AV Toggles",
+  "Version": "1.0.0.0",
+  "Author": "Anthony Terrell",
+  "Description": "Toggle the webcam and microphone, with key icons that show their real state.",
+  "UUID": "com.anthonyterrell.avtoggles",
+  "Icon": "imgs/plugin",
+  "Category": "AV Toggles",
+  "CategoryIcon": "imgs/category",
+  "CodePath": "plugin.mjs",
+  "Nodejs": {
+    "Version": "24"
+  },
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    }
+  ],
+  "Actions": [
+    {
+      "UUID": "com.anthonyterrell.avtoggles.webcam",
+      "Name": "Toggle Webcam",
+      "Tooltip": "Cut or restore USB power to the webcam",
+      "Icon": "imgs/action-webcam",
+      "Controllers": ["Keypad"],
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": false,
+      "States": [
+        { "Image": "imgs/camera-on", "ShowTitle": false },
+        { "Image": "imgs/camera-off", "ShowTitle": false }
+      ]
+    },
+    {
+      "UUID": "com.anthonyterrell.avtoggles.mic",
+      "Name": "Toggle Microphone",
+      "Tooltip": "Mute or unmute the default microphone",
+      "Icon": "imgs/action-mic",
+      "Controllers": ["Keypad"],
+      "DisableAutomaticStates": true,
+      "SupportedInMultiActions": false,
+      "States": [
+        { "Image": "imgs/mic-on", "ShowTitle": false },
+        { "Image": "imgs/mic-off", "ShowTitle": false }
+      ]
+    }
+  ]
+}

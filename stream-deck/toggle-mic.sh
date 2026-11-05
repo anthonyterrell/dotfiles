@@ -4,18 +4,27 @@ set -uo pipefail
 STATE_FILE="${STATE_FILE:-$HOME/.mic_volume}"
 FALLBACK_VOLUME=50
 
-notify() {
+show_notification() {
   osascript -e "display notification \"$1\" with title \"Microphone\"" >/dev/null 2>&1 || true
+}
+
+notify() {
+  [[ "${TOGGLE_QUIET:-0}" == 1 ]] || show_notification "$1"
 }
 
 fail() {
   echo "toggle-mic: $1" >&2
-  notify "$1"
+  show_notification "$1"
   exit 1
 }
 
 current=$(osascript -e 'input volume of (get volume settings)' 2>/dev/null)
 [[ "$current" =~ ^[0-9]+$ ]] || fail "The current input device does not let macOS change its volume"
+
+if [[ "${1:-}" == "--status" ]]; then
+  (( current > 0 )) && echo on || echo off
+  exit 0
+fi
 
 if (( current > 0 )); then
   echo "$current" >"$STATE_FILE"
