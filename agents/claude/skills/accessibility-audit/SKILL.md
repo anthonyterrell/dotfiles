@@ -37,8 +37,8 @@ WCAG 2.1 AA compliance checklist for all UI work. Run through this when building
 - [ ] Escape key closes modals, dropdowns, and overlays
 
 ### Page Structure
-- [ ] Skip navigation link on municipality pages (first focusable element, hidden until focused)
-- [ ] Page `<title>` includes municipality name and page context (e.g., "Add Pet | Philadelphia | PetLicense")
+- [ ] Skip navigation link on every page (first focusable element, hidden until focused)
+- [ ] Page `<title>` describes the page and the site (e.g., "Edit Profile | Acme")
 - [ ] Heading hierarchy is logical (`h1` → `h2` → `h3`, no skipped levels)
 - [ ] Landmark regions used: `<main>`, `<nav>`, `<header>`, `<footer>`
 - [ ] Language attribute set on `<html>` element
